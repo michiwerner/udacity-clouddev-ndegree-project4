@@ -2,4 +2,7 @@ language: minimal
 services:
   - docker
 script:
-  - cd reverse-proxy && docker build -t reverse-proxy:latest .
+  - cd reverse-proxy && docker build -t reverse-proxy:latest . && cd ..
+  - cd udagram-api-feed && docker build -t udagram-api-feed:latest . && cd ..
+  - cd udagram-api-user && docker build -t udagram-api-user:latest . && cd ..
+  - cd udagram-frontend && docker build -t udagram-frontend:latest . && cd ..
