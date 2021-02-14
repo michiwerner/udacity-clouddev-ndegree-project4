@@ -1,0 +1,4 @@
+services:
+  - docker
+script:
+  - cd reverse-proxy && docker build -t reverse-proxy:latest .
